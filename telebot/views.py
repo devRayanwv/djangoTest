@@ -11,6 +11,7 @@ from django.conf import settings
 # Create your views here.
 
 TelegramBot = telepot.Bot(settings.TELEGRAM_BOT_TOKEN)
+TelegramBot.setWebhook('https://almodrs.com/bot/344944268:AAFBk3-f-SJVq4xxEkn5ktlt2KN5htUsa88')
 logger = logging.getLogger('telegram.bot')
 
 
