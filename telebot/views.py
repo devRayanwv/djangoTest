@@ -13,8 +13,10 @@ from django.conf import settings
 TelegramBot = telepot.Bot(settings.TELEGRAM_BOT_TOKEN)
 logger = logging.getLogger('telegram.bot')
 
+
 def _display_help():
     return render_to_string('help.md')
+
 
 class CommandReceiveView(View):
     def post(self, request, bot_token):
