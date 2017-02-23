@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from . import views
+from .views import CommandReceiveView
 
 urlpatterns = [
-    url(r'^test/', views.run, name='run'),
-    url(r'^telebot/', views.index, name='index'),
+    url(r'^bot/(?P<bot_token>.+)/$', CommandReceiveView.as_view(), name='command'),
 ]
