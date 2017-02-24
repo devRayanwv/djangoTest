@@ -7,11 +7,11 @@ from django.views.generic import View
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from django.conf import settings
-
+import time
 # Create your views here.
 
 TelegramBot = telepot.Bot(settings.TELEGRAM_BOT_TOKEN)
-TelegramBot.setWebhook('https://almodrs.com/bot/344944268:AAFBk3-f-SJVq4xxEkn5ktlt2KN5htUsa88')
+#TelegramBot.setWebhook('https://almodrs.com/bot/344944268:AAFBk3-f-SJVq4xxEkn5ktlt2KN5htUsa88')
 logger = logging.getLogger('telegram.bot')
 
 
@@ -53,4 +53,3 @@ class CommandReceiveView(View):
     @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
         return super(CommandReceiveView, self).dispatch(request, *args, **kwargs)
-
